@@ -10,7 +10,6 @@ function parseUserAgent(userAgentString) {
 }
 
 const browserInfo = parseUserAgent(userAgent);
-console.log(`Browser: ${browserInfo.browser} ${browserInfo.version}`);
 
 //find operating system
 const osMapping = {
@@ -23,13 +22,10 @@ const osMapping = {
 };
 
 const osInfo = osMapping[platform] || "Unknown";
-console.log(`Operating System: ${osInfo}`);
 
 //get screen resolution
 const screenWidth = window.screen.width;
 const screenHeight = window.screen.height;
-
-console.log(`Screen Resolution: ${screenWidth} x ${screenHeight}`);
 
 
 const root = document.getElementById("root");
