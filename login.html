@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bejelentkezés</title>
     <link rel="stylesheet" href="./style/login.css">
-    <script defer src="login.js"></script>
+    <script defer src="/script/userData.js"></script>
+    <script defer src="/script/password.js"></script>
+    <script defer src="/script/placeholder.js"></script>
+    <script defer src="/script/qr.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -19,11 +23,12 @@
                 <div id="form-conatiner">
                     <h2>Bejelentkezés</h2>
                     <form>
-                        <input type="text" placeholder="Felhasználói név">
+                        <input type="text" id="username" placeholder="Felhasználói név">
                         <input type="password" id="password" placeholder="Jelszó">
                         <i class="fas fa-eye" id="toggle-password"></i>
                         <div id="checkbox-container">
-                            <input type="checkbox" name="stay-logged-in" id="stay-logged-in"> <label for="stay-logged-in" id="stay-logged-in-label">Maradjon bejelentkezve</label>
+                            <input type="checkbox" name="stay-logged-in" id="stay-logged-in">
+                            <label for="stay-logged-in" id="stay-logged-in-label">Maradjon bejelentkezve</label>
                         </div>
                         <div id="btns">
                             <a href="">Elfelejtett jelszó</a>
@@ -31,10 +36,19 @@
                         </div>
                     </form>
                     <div id="download">
-                        <h3>Töltse le az appot!</h3>
+                        <h3 id="download-btn">Töltse le az appot!</h3>
                         <i class="fa-solid fa-less-than"></i>
                     </div>
-                    <!--down arrow icon-->
+                    <div id="qr-codes">
+                        <div id="apple" class="qr">
+                            <img src="./style/img/apple.png" alt="apple logo" class="SAM logo">
+                            <img src="./style/img/appleQR.png" alt="apple QR code">
+                        </div>
+                        <div id="android" class="qr">
+                            <img src="./style/img/android.png" alt="android logo" class="logo">
+                            <img src="./style/img/androidQR.png" alt="android QR code">
+                        </div>
+                    </div>
                     <div id="help-container">
                         <i class="fa-solid fa-circle-question"></i>
                         <a href="" id="help">Segédlet az ügyfeleknek</a>

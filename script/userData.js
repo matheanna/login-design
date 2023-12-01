@@ -10,27 +10,22 @@ function parseUserAgent(userAgentString) {
 }
 
 const browserInfo = parseUserAgent(userAgent);
-console.log(`Browser: ${browserInfo.browser} ${browserInfo.version}`);
 
 //find operating system
 const osMapping = {
-    Win32: "Windows",
-    Win64: "Windows",
-    MacIntel: "Mac OS",
-    MacPPC: "Mac OS",
-    "Linux i686": "Linux",
-    "Linux x86_64": "Linux",
+  Win32: "Windows",
+  Win64: "Windows",
+  MacIntel: "Mac OS",
+  MacPPC: "Mac OS",
+  "Linux i686": "Linux",
+  "Linux x86_64": "Linux",
 };
 
 const osInfo = osMapping[platform] || "Unknown";
-console.log(`Operating System: ${osInfo}`);
 
 //get screen resolution
 const screenWidth = window.screen.width;
 const screenHeight = window.screen.height;
-
-console.log(`Screen Resolution: ${screenWidth} x ${screenHeight}`);
-
 
 const root = document.getElementById("root");
 //set browser
@@ -42,16 +37,3 @@ osElement.innerHTML += osInfo;
 //set resolution
 const resolutionElement = root.querySelector("#resolution");
 resolutionElement.innerHTML += ` ${screenWidth} x ${screenHeight}`;
-
-//toggle password
-const passwordInput = root.querySelector('#password');
-    const togglePassword = root.querySelector('#toggle-password');
-
-    togglePassword.addEventListener('click', () => {
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-
-        // toggle icon
-        togglePassword.classList.toggle('fa-eye-slash', type === 'text');
-    });
-

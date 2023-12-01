@@ -7,6 +7,7 @@ html {
   flex-direction: column;
   margin: auto;
   width: 722px;
+  margin-top: 3%;
 }
 #form-and-logo {
   display: flex;
@@ -98,18 +99,7 @@ form input {
   color: #000000;
   cursor: pointer;
 }
-/* form input::after {
-  content: '\f070'; 
-  font-family: 'Font Awesome 5 Free';
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);  
-  color: #555;
-  pointer-events: none;
-  cursor: pointer;
-  font-size:medium;
-} */
+
 form label {
   color: #000;
   font-family: Montserrat;
@@ -118,6 +108,32 @@ form label {
   font-weight: 500;
   line-height: normal;
 }
+
+.input-container {
+  position: relative;
+}
+
+form input::placeholder {
+  transition: transform 0.3s ease;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+form input:focus::placeholder,
+form input.form-input-filled::placeholder {
+  transform: translateY(-1.5rem);
+}
+.placeholder::after {
+  position: absolute;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 #checkbox-container {
   align-items: center;
 }
@@ -129,15 +145,6 @@ form label {
   padding-top: 1px;
   cursor: pointer;
 }
-/* #stay-logged-in:checked{
-  background-color: #FCCF44;
-}
-#stay-logged-in:checked::before{
-  content: '\2713';
-            font-size: 15px; 
-            color: #000; 
-            position: relative;
-} */
 #stay-logged-in-label {
   cursor: pointer;
   width: 13.125rem;
@@ -212,8 +219,42 @@ a {
   transform: rotate(270deg) scaleX(0.7) scaleY(1.2);
   cursor: pointer;
 }
-#download h3{
+#download h3 {
   cursor: pointer;
+}
+#qr-codes {
+  display: none;
+  flex-direction: row;
+  width: 29.1875rem;
+  height: 12.0625rem;
+  background: #f5f9ff;
+  align-items: center;
+  margin: auto;
+  align-items: center;
+}
+.qr {
+  display: flex;
+  flex-direction: column;
+}
+.qr img {
+  margin-left: 3.95313rem;
+  margin-right: 3.95313rem;
+  margin-top: 0.8rem;
+}
+.qr .logo {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  flex-shrink: 0;
+  margin: auto;
+}
+#form-and-logo.expanded {
+  height: 37.5rem;
+}
+#form-conatiner.expanded {
+  height: 37.5rem;
+}
+#logo-container.expanded {
+  height: 37.5rem;
 }
 
 /**/
