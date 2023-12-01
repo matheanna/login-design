@@ -7,6 +7,7 @@ html {
   flex-direction: column;
   margin: auto;
   width: 722px;
+  margin-top: 7.5%;
 }
 #form-and-logo {
   display: flex;
@@ -107,6 +108,32 @@ form label {
   font-weight: 500;
   line-height: normal;
 }
+
+.input-container {
+  position: relative;
+}
+
+form input::placeholder {
+  transition: transform 0.3s ease;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+form input:focus::placeholder,
+form input.form-input-filled::placeholder {
+  transform: translateY(-1.5rem);
+}
+.placeholder::after {
+  position: absolute;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 #checkbox-container {
   align-items: center;
 }
@@ -205,16 +232,16 @@ a {
   margin: auto;
   align-items: center;
 }
-.qr{
+.qr {
   display: flex;
   flex-direction: column;
 }
-.qr img{
- margin-left: 3.95313rem;
- margin-right: 3.95313rem;
- margin-top: 0.8rem;
+.qr img {
+  margin-left: 3.95313rem;
+  margin-right: 3.95313rem;
+  margin-top: 0.8rem;
 }
-.qr .logo{
+.qr .logo {
   width: 2.1875rem;
   height: 2.1875rem;
   flex-shrink: 0;
@@ -223,10 +250,10 @@ a {
 #form-and-logo.expanded {
   height: 37.5rem;
 }
-#form-conatiner.expanded{
+#form-conatiner.expanded {
   height: 37.5rem;
 }
-#logo-container.expanded{
+#logo-container.expanded {
   height: 37.5rem;
 }
 
