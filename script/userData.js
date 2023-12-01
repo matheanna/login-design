@@ -13,12 +13,12 @@ const browserInfo = parseUserAgent(userAgent);
 
 //find operating system
 const osMapping = {
-    Win32: "Windows",
-    Win64: "Windows",
-    MacIntel: "Mac OS",
-    MacPPC: "Mac OS",
-    "Linux i686": "Linux",
-    "Linux x86_64": "Linux",
+  Win32: "Windows",
+  Win64: "Windows",
+  MacIntel: "Mac OS",
+  MacPPC: "Mac OS",
+  "Linux i686": "Linux",
+  "Linux x86_64": "Linux",
 };
 
 const osInfo = osMapping[platform] || "Unknown";
@@ -26,7 +26,6 @@ const osInfo = osMapping[platform] || "Unknown";
 //get screen resolution
 const screenWidth = window.screen.width;
 const screenHeight = window.screen.height;
-
 
 const root = document.getElementById("root");
 //set browser
@@ -38,7 +37,3 @@ osElement.innerHTML += osInfo;
 //set resolution
 const resolutionElement = root.querySelector("#resolution");
 resolutionElement.innerHTML += ` ${screenWidth} x ${screenHeight}`;
-
-
-
-
