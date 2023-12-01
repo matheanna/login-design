@@ -52,7 +52,13 @@ const passwordInput = root.querySelector('#password');
         passwordInput.setAttribute('type', type);
 
         // toggle icon
-        togglePassword.classList.toggle('fa-eye-slash', type === 'text');
+        if(togglePassword.classList.contains('fa-eye-slash')){
+            togglePassword.classList.add('fa-eye')
+            togglePassword.classList.remove('fa-eye-slash');
+        }else if(togglePassword.classList.contains('fa-eye')){
+            togglePassword.classList.add('fa-eye-slash');
+            togglePassword.classList.remove('fa-eye')
+        }
     });
 
 //display qr codes
