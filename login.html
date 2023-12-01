@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat&family=Neuton&family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root">
+        <div id="login">
+            <div id="form-and-logo">
+                <div id="form-conatiner">
+                    <h2>Bejelentkezés</h2>
+                    <form>
+                        <input type="text" placeholder="Felhasználói név">
+                        <input type="password" id="password" placeholder="Jelszó">
+                        <i class="fas fa-eye" id="toggle-password"></i>
+                        <div id="checkbox-container">
+                            <input type="checkbox" name="stay-logged-in" id="stay-logged-in"> <label for="stay-logged-in" id="stay-logged-in-label">Maradjon bejelentkezve</label>
+                        </div>
+                        <div id="btns">
+                            <a href="">Elfelejtett jelszó</a>
+                            <button type="submit" id="submit-btn">Mehet</button>
+                        </div>
+                    </form>
+                    <div id="download">
+                        <h3>Töltse le az appot!</h3>
+                        <i class="fa-solid fa-less-than"></i>
+                    </div>
+                    <!--down arrow icon-->
+                    <div id="help-container">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <a href="" id="help">Segédlet az ügyfeleknek</a>
+                    </div>
+                </div>
+                <div id="logo-container">
+                    <img src="./style/img/logo.png" alt="logo" id="logo">
+                </div>
+            </div>
+            <div id="computer-data">
+                <p id="browser">Az Ön böngészője: </p>
+                <p id="os">Az Ön operációs rendszere: </p>
+                <p id="resolution">Monitorának felbontása:</p>
+                <p>Ajánlott felbontás: 1920 x 1080</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

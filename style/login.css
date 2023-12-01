@@ -1,0 +1,238 @@
+html {
+  background: #2c4a77;
+}
+#login {
+  background: #f5f9ff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 722px;
+}
+#form-and-logo {
+  display: flex;
+  flex-direction: row;
+}
+#computer-data {
+  background: #93c4e1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  width: 45.125rem;
+  height: 3.375rem;
+  flex-shrink: 0;
+}
+#computer-data p {
+  color: #474747;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Neuton", serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 1% 2%;
+}
+
+#logo-container {
+  width: 15.9375rem;
+  height: 25.3125rem;
+  flex-shrink: 0;
+  background: url("./img/logo_background.png"), lightgray 50% / cover no-repeat;
+  background-size: cover;
+}
+#logo {
+  width: 15.3125rem;
+  height: 4.51844rem;
+  flex-shrink: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 2.4rem;
+}
+#form-conatiner {
+  width: 29.1875rem;
+  height: 25.3125rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*form*/
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#form-conatiner h2 {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-weight: bolder;
+  margin-top: 1.8rem;
+  margin-bottom: 0.1rem;
+}
+
+/*inputs*/
+form input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #474747;
+  width: 19rem;
+  background-color: transparent;
+  margin: auto;
+  padding-top: 2.5rem;
+  padding-right: 30px;
+  position: relative;
+}
+#toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: #000000;
+  cursor: pointer;
+}
+/* form input::after {
+  content: '\f070'; 
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);  
+  color: #555;
+  pointer-events: none;
+  cursor: pointer;
+  font-size:medium;
+} */
+form label {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#checkbox-container {
+  align-items: center;
+}
+#stay-logged-in {
+  margin-top: 1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  width: 1.1rem;
+  padding-top: 1px;
+  cursor: pointer;
+}
+/* #stay-logged-in:checked{
+  background-color: #FCCF44;
+}
+#stay-logged-in:checked::before{
+  content: '\2713';
+            font-size: 15px; 
+            color: #000; 
+            position: relative;
+} */
+#stay-logged-in-label {
+  cursor: pointer;
+  width: 13.125rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/*button*/
+#btns {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#submit-btn {
+  border-radius: 2.5rem;
+  background: #fccf44;
+  width: 5.625rem;
+  height: 2.125rem;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: normal;
+}
+#submit-btn:hover {
+  background-color: #f7c83d;
+}
+/*links*/
+a {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+#help-container {
+  width: 29.1875rem;
+  position: relative;
+  padding-top: 2.3rem;
+}
+#help {
+  position: absolute;
+  left: 1.2rem;
+}
+/*download*/
+#download {
+  display: flex;
+  flex-direction: row;
+  width: 11rem;
+}
+#download i {
+  position: relative;
+  top: 19%;
+  left: 25%;
+  transform: rotate(270deg) scaleX(0.7) scaleY(1.2);
+  cursor: pointer;
+}
+#download h3{
+  cursor: pointer;
+}
+
+/**/
+h3 {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 2.7rem;
+}
+
+#help-container i {
+  height: 1.1rem;
+  flex-shrink: 0;
+  width: 1.1rem;
+  padding-top: 0.14rem;
+  padding-left: 0.1rem;
+  cursor: pointer;
+}
